@@ -1,8 +1,14 @@
-body{
-  background-color: #565456;
+body  {
+  background-color: #313131;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  color: #f4f4f4;
+  --color-title:#957DAD;
   }
 .header {
-  border: 1px solid red;
   width: 100%;
   max-width: 900px;
   padding: 8px;
@@ -24,15 +30,17 @@ body{
 
 .header__link:focus{
   outline: none;
-  background-color: rgb(197, 195, 198);
-  border-radius: 5px;
+  background-color: rgb(111, 109, 112);
 }
 .icon {
   width: 24px;
 }
+.icone--texto {
+  margin: 0 8px;
+  animation: thunder 1s infinite alternate;
+}
 
 .main {
-  border: 1px solid red;
   width: 100%;
   max-width: 700px;
   padding: 8px;
@@ -41,7 +49,6 @@ body{
 }
 
 .profile {
-  border: 1px solid red;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -52,21 +59,20 @@ body{
   width: 100%;
   max-width: 200px;
   border-radius: 50%;
+  border: #868686;
 }
 
 .profile__name {
-  font-family: 'Recursive', sans-serif;
+  font-family: 'Damion', cursive;
   font-size: 52px;
   font-weight: 400;
-  color: #790a79ab;
+  color: var(--color-title);
   margin: 16px 0;
 }
 
 .description_profile {
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #f4f4f4;
   margin: 0;
   width: 100%;
   max-width: 350px;
@@ -74,23 +80,21 @@ body{
 }
 
 .section {
-  border: 1px solid red;
   padding: 8px;
   width: 100%;
   max-width: 350px;
   margin: 24px auto;
+  box-sizing: border-box;
 }
 
-.section__titulo {
-  font-family: 'Poppins', sans-serif;
+.section__title {
   font-size: 22px;
   font-weight: 400;
-  color: #790a79ab;
+  color: var(--color-title);
   margin: 16px 0;
 }
 
 .curso {
-  border: 1px solid red;
   background-color: #605f60;
   padding: 8px;
   margin: 16px 0;
@@ -99,18 +103,45 @@ body{
 }
 
 .curso__titulo {
-  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #790a79ab;
+  color: var(--color-title);
   margin: 8px;
 }
 
 .curso__descricao{
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  margin: 8px 0;
+}
+
+.footer{
+  width: 100%;
+  max-width: 100%;
+  height: 42px;
+  background-color: #957DAD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.footer__text{
+  font-size: 14px;
+  font-weight: 400;
   color: #f4f4f4;
+  margin: 0;
+  color:#605f60;
+  align-items: center;
+}
 
+@keyframes thunder {
+  0% {
+    transform: scale(.8);
+  }
 
+  100% {
+    transform: scale(1.2);
+  }
 }
